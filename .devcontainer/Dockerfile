@@ -4,17 +4,17 @@ ENV PASSWD=deploy
 ENV WORKDIR=projects
 
 # 替换为阿里云镜像，如不需要可以去掉本部分
-RUN printf '\n\
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse \n\
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse \n\
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse \n\
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse \n\
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse \n\
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse \n\
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse \n\
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse \n\
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse \n\
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse' > /etc/apt/sources.list
+#RUN printf '\n\
+#deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse \n\
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse \n\
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse \n\
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse \n\
+#deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse \n\
+#deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse \n\
+#deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse \n\
+#deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse \n\
+#deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse \n\
+#deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse' > /etc/apt/sources.list
 
 # 安装开发环境必要的包
 RUN apt-get update \
